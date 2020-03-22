@@ -1,19 +1,32 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {
+    BrowserRouter as Router,
+    Route,
+    Switch,
+} from 'react-router-dom';
+import MyNavBar from "./Components/Node/MyNavBar";
+import AddPizza from "./Components/AddPizza";
+import Pizza from './Components/Pizza'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+        <div class="container">
+            <MyNavBar />
+            <Router>
+                <Switch>
+                    <Route path="/pizzas">
+                        <Pizza />
+                    </Route>
+                    <Route path="/new-pizza">
+                        <AddPizza />
+                    </Route>
+                </Switch>
+            </Router>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
     );
   }
 }
