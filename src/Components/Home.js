@@ -32,7 +32,7 @@ export default class Home extends React.Component {
         return(
             <Grid container spacing={4}>
                 <Grid item xs={12} md={6}>
-                    <CardActionArea component="a" href="#">
+                    <CardActionArea component="a" href="/pizzas">
                         <Card className={this.classes.card}>
                             <div className={this.classes.cardDetails}>
                                 <CardContent>
