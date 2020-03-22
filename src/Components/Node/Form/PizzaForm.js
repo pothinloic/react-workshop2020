@@ -37,6 +37,7 @@ export default class PizzaForm extends React.Component {
             pizza_name: '',
             category: '',
             ingredients: '',
+            pizza_price: '',
         };
 
         this.classes = useStyles;
@@ -56,7 +57,7 @@ export default class PizzaForm extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        alert(`Pizza créer: ${this.state.pizza_name} (${this.state.category}) ${this.state.ingredients}`);
+        alert(`Pizza créer: ${this.state.pizza_name} (${this.state.category}) ${this.state.ingredients}, elle coute ${this.state.pizza_price}`);
     }
 
     render() {
@@ -108,6 +109,19 @@ export default class PizzaForm extends React.Component {
                                     label="Ingrédients"
                                     name="ingredients"
                                     autoComplete="ingredients"
+                                    onChange={this.handleChange}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <TextField
+                                    autoComplete="pizza_price"
+                                    name="pizza_price"
+                                    variant="outlined"
+                                    required
+                                    fullWidth
+                                    id="pizza_price"
+                                    label="Prix de la pizza"
+                                    autoFocus
                                     onChange={this.handleChange}
                                 />
                             </Grid>
