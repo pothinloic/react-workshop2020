@@ -56,7 +56,7 @@ export default class PizzaForm extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        alert("Pizza créer: " + this.state.pizza_name + " (" + this.state.category + ") " + this.state.ingredients);
+        alert(`Pizza créer: ${this.state.pizza_name} (${this.state.category}) ${this.state.ingredients}`);
     }
 
     render() {
@@ -95,7 +95,7 @@ export default class PizzaForm extends React.Component {
                                 >
                                     <MenuItem value="porc">Porc</MenuItem>
                                     <MenuItem value="poulet">Poulet</MenuItem>
-                                    <MenuItem value="vegie">Végétarien</MenuItem>
+                                    <MenuItem value="veggie">Végétarien</MenuItem>
                                     <MenuItem value="fish">Poisson / Fruit de mer</MenuItem>
                                 </Select>
                             </Grid>

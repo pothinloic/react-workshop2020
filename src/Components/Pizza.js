@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PizzaCard from "./Node/PizzaCard";
 
 export default class Pizza extends Component {
     constructor(props) {
@@ -7,9 +8,12 @@ export default class Pizza extends Component {
 
     render() {
         return (
-            <div>
-                Pizza
-            </div>
+            <PizzaCard data={{
+                name: 'Royale',
+                category: 'fish',
+                ingredients: 'Sauce tomate, jambon, mozarella, champignons, olives, oignons',
+                price: 8,
+            }} />
         );
     }
 }
