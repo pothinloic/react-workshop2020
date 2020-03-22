@@ -10,6 +10,7 @@ import MyNavBar from "./Components/Node/MyNavBar";
 import AddPizza from "./Components/AddPizza";
 import Pizza from './Components/Pizza'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Home from "./Components/Home";
 
 class App extends Component {
   render() {
@@ -23,6 +24,9 @@ class App extends Component {
                     </Route>
                     <Route path="/new-pizza">
                         <AddPizza />
+                    </Route>
+                    <Route path="/">
+                        <Home />
                     </Route>
                 </Switch>
             </Router>
